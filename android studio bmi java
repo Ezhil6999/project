@@ -1,0 +1,58 @@
+package com.example.myapplication;
+
+import android.os.Bundle;
+
+import com.google.android.material.snackbar.Snackbar;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.view.View;
+
+import androidx.navigation.NavController;
+import androidx.navigation.Navigation;
+import androidx.navigation.ui.AppBarConfiguration;
+import androidx.navigation.ui.NavigationUI;
+
+import com.example.myapplication.databinding.ActivityMainBinding;
+
+import android.view.Menu;
+import android.view.MenuItem;
+import android.widget.EditText;
+import android.widget.TextView;
+
+public class MainActivity extends AppCompatActivity {
+    private EditText weight;
+    private EditText height;
+    private TextView result;
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        height=(EditText) findViewById(R.id.height);
+        weight=(EditText) findViewById(R.id.weight);
+        result=(TextView) findViewById(R.id.lblcalculator);
+    }
+    public void calculator(View v){
+        String h=height.getText().toString();
+        String w=weight.getText().toString();
+        if(h!=null&& !"".equals(h) && w!=null&&!"".equals(w)){
+            float fh=Float.parseFloat(h);
+            float fw=Float.parseFloat(w);
+            float bmi=(fw/(fh*fh))*10000;
+            String lbl="";
+        if(bmi<=18.5){
+            lbl=getString(R.string.under);
+        }
+        else if(bmi>=18.55 && bmi<=24.99){
+            lbl=getString(R.string.normal);
+        }
+        else if(bmi>=25 && bmi<=29.99){
+            lbl=getString(R.string.over);
+        }
+        else {
+            lbl=getString(R.string.obesity);
+        }
+        result.setText(bmi+"\n\n"+lbl);
+        }
+    }
+}
