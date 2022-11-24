@@ -56,3 +56,95 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 }
+
+
+
+
+
+
+
+<resources>
+    <string name="app_name">BMI calculator</string>
+    <string name="lblweight">Entre Your Weight</string>
+    <string name="lblheight">Entre Your Height</string>
+    <string name="find">Find BMI</string>
+    <string name="under">Under Weight</string>
+    <string name="normal">normal weigjt</string>
+    <string name="over">Over Weight</string>
+    <string name="obesity">Obesity</string>
+    <string name="hello_first_fragment">hi</string>
+    <string name="next">ezhil</string>
+    <string name="previous">raj</string>
+
+</resources>
+
+
+
+
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/weigh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="@string/lblweight"
+        android:textSize="30dp" />
+
+    <EditText
+        android:id="@+id/weight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:inputType="number|numberDecimal"
+        android:ems="10"
+        />
+    <TextView
+        android:id="@+id/heigh"
+        android:text="@string/lblheight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:textSize="30dp"
+    />
+    <EditText
+        android:id="@+id/height"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:inputType="number|numberDecimal"
+        android:ems="10"
+        />
+
+    <Button
+        android:id="@+id/lblcalculator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:onClick="calculator"
+        android:text="@string/find" />
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:layout_marginTop="25dp"
+        android:textSize="20dp"
+        />
+
+</LinearLayout>
