@@ -1,0 +1,34 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/container.dart';
+import 'package:flutter/src/widgets/framework.dart';
+
+class second extends StatefulWidget {
+  const second({super.key});
+
+  @override
+  State<second> createState() => _secondState();
+}
+
+class _secondState extends State<second> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      extendBodyBehindAppBar: true,
+      appBar: AppBar(
+        //backgroundColor: Colors.transparent,
+        backgroundColor: Colors.black.withOpacity(0.3),
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.vertical(bottom: Radius.circular(20))),
+        title: Text("E Z H I L"),
+        centerTitle: true,
+        leading: BackButton(),
+      ),
+      body: Image.network(
+        "https://th.bing.com/th/id/OIP.ctXvF29UlPKQr239eXTC6wAAAA?pid=ImgDet&rs=1",
+        width: double.infinity,
+        height: double.infinity,
+        fit: BoxFit.cover,
+      ),
+    );
+  }
+}
