@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">800249476068-l0t5p6go02qeqf0nufrt6im88ahgelmi.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">800249476068</string>
+    <string name="google_api_key" translatable="false">AIzaSyA4qxtzdK6wMqLdzBvQtJpNpyPZTD5hOiU</string>
+    <string name="google_app_id" translatable="false">1:800249476068:android:b65e0c5a1f93c1e0fdcdf1</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA4qxtzdK6wMqLdzBvQtJpNpyPZTD5hOiU</string>
+    <string name="google_storage_bucket" translatable="false">keyboard-5b001.appspot.com</string>
+    <string name="project_id" translatable="false">keyboard-5b001</string>
+</resources>
